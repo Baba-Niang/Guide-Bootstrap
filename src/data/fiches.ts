@@ -30,7 +30,8 @@ export type Part = {
 
 // Convention image : /fiches/B_NN.png (44 images disponibles à ce jour).
 // Les images sont attribuées séquentiellement aux premières fiches.
-const img = (n: number) => `/fiches/B_${n}.png`;
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const img = (n: number) => `${BASE_PATH}/fiches/B_${n}.png`;
 
 export const PARTS: Part[] = [
   // ---------------------------------------------------------------- A
